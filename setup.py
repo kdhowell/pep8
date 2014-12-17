@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
+# _future_ is source and with_statement is module
 from __future__ import with_statement
 from setuptools import setup
 
-
+#create the function get_version
+#labels pep8.py as f
+#
 def get_version():
     with open('pep8.py') as f:
         for line in f:
             if line.startswith('__version__'):
                 return eval(line.split('=')[-1])
 
+#creates get_long_description function
 
 def get_long_description():
     descr = []
